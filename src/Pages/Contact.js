@@ -15,7 +15,7 @@ function Contact() {
 <div><h2 className='mt-[100px] font-bold text-[20px]'>OUR STORE</h2>
 <div className='mt-[30px] text-[18px]'>54709 Willms Station<br/> 
 Suite 350, Washington, USA<br/>
-<div className='mt-[30px] text-[18px]'>Tel: (415) 555‑0132</div>
+<div className='mt-[30px] text-[18px]'>Tel: (415) 455‑0132</div>
 <div className='text-[18px]'>Email: greatstackdev@gmail.com</div>
 <div className='mt-[30px] font-bold text-[20px]'>CAREERS AT FOREVER</div>
 <div className='text-[18px]'>Learn more about our teams and job openings.</div>
