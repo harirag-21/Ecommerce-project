@@ -1,6 +1,7 @@
 import React from 'react'
 import rectangle from "../Assets/Rectangle 3605.png"
 import about from "../Assets/about_img.png"
+import Subscribe from '../Components/Subscribe'
 function About() {
   return (
     <div>
@@ -34,6 +35,7 @@ Forever was born out of a passion for innovation and a desire to revolutionize t
 <p className='ml-[77px] mt-[20px]'>Our team of dedicated professionals is <br/>here to assist you the way, ensuring your  <br/>satisfaction is our top priority.</p>
 </div>
 </div>
+<Subscribe/>
 </div>
   )
 }

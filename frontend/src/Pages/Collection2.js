@@ -2,7 +2,7 @@ import React from 'react'
 import rectangle from "../Assets/Rectangle 3605.png"
 import first from "../Assets/p_img1.png"
 import second from "../Assets/p_img2.png"
-import third  from "../Assets/p_img3 (1).png"
+import third from "../Assets/p_img3 (1).png"
 import fourth from "../Assets/p_img4.png"
 import fifth from "../Assets/p_img5.png"
 import sixth from "../Assets/p_img6.png"
@@ -33,199 +33,263 @@ import i30 from "../Assets/p_img30.png"
 import i31 from "../Assets/p_img40.png"
 import i32 from "../Assets/p_img43.png"
 import i33 from "../Assets/p_img48.png"
+import Subscribe from '../Components/Subscribe'
+import { useState } from 'react'
 function Collection2() {
-  const colimage=[{
-    image:first,
-    ctext:"Women Round Neck Cotton Top",
-    crate:"$149"
-  },{
-    image:second,
-    ctext:"Men Neck Cotton T-shirt",
-    crate:"$149"
-  },{
-     image:third,
-    ctext:"Girls Neck Cotton Top",
-    crate:"$149"
-  },{
-       image:fourth,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-    
-       image:fifth,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-    image:sixth,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-    image:seventh,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-  image:eight,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:nine,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i10,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i11,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i12,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i13,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i14,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i15,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i16,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i17,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i18,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i19,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i20,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i21,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i22,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i23,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i24,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-         image:i25,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  // },{
-  //    image:i26,
-  //   ctext:"Men Neck Cotton Top",
-  //   crate:"$149"
-  },{
-     image:i27,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i28,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i29,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
- image:i30,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i31,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i32,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
-  },{
-     image:i33,
-    ctext:"Men Neck Cotton Top",
-    crate:"$149"
+  const [selectedCategories,setselectedCategories]=useState([])
+    const [selectedTypes,setselectedTypes]=useState([])
+    const [sortOrder,setSortOrder]=useState("low")
+   
+  const colimage = [{
+    image: first,
+    ctext: "Women Round Neck Cotton Top",
+    crate: "$149",
+    category:"women"
+  }, {
+    image: second,
+    ctext: "Men Neck Cotton T-shirt",
+    crate: "$149",
+    category:"men"
+  }, {
+    image: third,
+    ctext: "Girls Neck Cotton Top",
+    crate: "$149",
+      category:"kids"
+  }, {
+    image: fourth,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+  }, {
+
+    image: fifth,
+    ctext: "Women Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: sixth,
+    ctext: "girl Neck Cotton Top",
+    crate: "$149",
+      category:"women"
+  }, {
+    image: seventh,
+    ctext: "Men Tapered Fit Flat-Front Trousers",
+    crate: "$149",
+      category:"men"
+  }, {
+    image: eight,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+  }, {
+    image: nine,
+    ctext: "Girl Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i10,
+    ctext: "Men Tapered Fit Flat-Front Trousers",
+    crate: "$149",
+      category:"men",
+      types:"bottomwear"
+  }, {
+    image: i11,
+    ctext: "Men neck",
+    crate: "$149",
+      category:"men",
+      types:"topwear"
+  }, {
+    image: i12,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+  }, {
+    image: i13,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"women"
+  }, {
+    image: i14,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i15,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+  }, {
+    image: i16,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i17,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+  }, {
+    image: i18,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i19,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i20,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+
+  }, {
+    image: i21,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+          category:"women"
+  }, {
+    image: i22,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+  }, {
+    image: i23,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i24,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+  }, {
+    image: i25,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"kid"
+    // },{
+    //    image:i26,
+    //   ctext:"Men Neck Cotton Top",
+    //   crate:"$149"
+  }, {
+    image: i27,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+          category:"kid"
+  }, {
+    image: i28,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
+      
+  }, {
+    image: i29,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+          category:"kid"
+  }, {
+    image: i30,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+          category:"women"
+  }, {
+    image: i31,
+    ctext: "Men Neck Cotton Top",
+    crate: "$100",
+          category:"men"
+  }, {
+    image: i32,
+    ctext: "Men Neck Cotton Top",
+    crate: "$169",
+      category:"men"
+  }, {
+    image: i33,
+    ctext: "Men Neck Cotton Top",
+    crate: "$149",
+      category:"men"
   }
-]
+  ]
+const handleCategoryChange=(category)=>{
+  setselectedCategories(prev=>prev.includes(category) ? prev.filter(c=>c!==category):[...prev,category])
+}
+const handleTypeChange=(types)=>{
+  setselectedTypes(prev=>prev.includes(types)?prev.filter(t=>t!==types):[...prev,types])
+}
+
+
   return (
     <div>
 
-    <div className='border border-#ADADAD w-[1200px] h-[1px] ml-[66px]'></div>
+      <div className='border border-#ADADAD w-[1200px] h-[1px] ml-[66px]'></div>
 
-<div className='flex ml-[430px] mt-[70px] gap-[10px] text-[25px]'>
-  <div><h2>ALL</h2></div>
-  <div className='font-bold'><h2>COLLECTIONS</h2></div>
-  <div><img src={rectangle} alt='rectangle' className='mt-[30px] ml-[10px]'/></div>
-</div>
-
- <div className='ml-[960px]'>
-  <select className=''><option value="low">Sort by: Price: Low To Low</option>
-<option value="high">Sort by: Price: Low To High</option>
-    </select> 
- </div>
-
- 
-<div className='flex gap-[30px]'>
-<div>
-    <div className=' text-[25px] ml-[66px]'>FILTERS</div>
-    <div className='border border-black w-[245px] h-[179px] ml-[56px] mt-[15px]'>
-      <div className='ml-[30px] mt-[10px]'>CATEGORIES</div>
-
-      <div className=' gap-[10px] mt-[20px]'>
-      <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3 mt-[10px] '/>Men</div>
-      <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3 mt-[10px]'/>Women</div>
-      <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3  mt-[10px]'/>Kids</div>
+      <div className='flex ml-[430px] mt-[70px] gap-[10px] text-[25px]'>
+        <div><h2>ALL</h2></div>
+        <div className='font-bold'><h2>COLLECTIONS</h2></div>
+        <div><img src={rectangle} alt='rectangle' className='mt-[30px] ml-[10px]' /></div>
       </div>
-</div>
-    
-    <div className='border border-black w-[245px] h-[179px] ml-[56px] mt-[30px]'>
-      <div className='ml-[30px] mt-[10px]'>TYPE</div>
 
-       <div className=' gap-[10px] mt-[20px]'>
-      <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3 mt-[10px] '/>Topwear</div>
-      <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3 mt-[10px]'/>Bottomwear</div>
-      <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3  mt-[10px]'/>Winterwear</div>
+      <div className='ml-[960px]'>
+        <select onChange={(e)=>setSortOrder(e.target.value)}>
+          <option value="low">Sort by: Price: Low To High</option>
+          <option value="high">Sort by: Price: High To Low</option>
+        </select>
       </div>
-    </div>
-    </div>
-    <div className='mt-[50px] grid grid-cols-4 gap-[20px]'>
-      {
-        
-        colimage.map((i)=>(
-          <div>
-          <div><img src={i.image}/> </div>
-         <div><h2 className='text-sm'>{i.ctext} </h2> </div>
-           <div><h2 className='text-sm'>{i.crate} </h2> </div>
-         </div>
-        ))
-        
-      }
 
+
+      <div className='flex gap-[30px]'>
+        <div>
+          <div className=' text-[25px] ml-[66px]'>FILTERS</div>
+          <div className='border border-black w-[245px] h-[179px] ml-[56px] mt-[15px]'>
+            <div className='ml-[30px] mt-[10px]'>CATEGORIES</div>
+
+            <div className=' gap-[10px] mt-[20px]'>
+              <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("men")} className='w-[20px] h-[20px] mr-3 mt-[10px] ' />Men</div>
+              <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("women")} className='w-[20px] h-[20px] mr-3 mt-[10px]' />Women</div>
+              <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("kid")} className='w-[20px] h-[20px] mr-3  mt-[10px]' />Kids</div>
+            </div>
+          </div>
+
+          <div className='border border-black w-[245px] h-[179px] ml-[56px] mt-[30px]'>
+            <div className='ml-[30px] mt-[10px]'>TYPE</div>
+
+            <div className=' gap-[10px] mt-[20px]'>
+              <div className='ml-[30px]'><input type='checkbox' value="topwear" onChange={() => handleTypeChange("topwear")} className='w-[20px] h-[20px] mr-3 mt-[10px] ' />Topwear</div>
+              <div className='ml-[30px]'><input type='checkbox' value="bottomwear" onChange={() => handleTypeChange("bottomwear")} className='w-[20px] h-[20px] mr-3 mt-[10px]' />Bottomwear</div>
+              <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3  mt-[10px]' />Winterwear</div>
+            </div>
+          </div>
+        </div>
+        <div className='mt-[50px] grid grid-cols-4 gap-[20px]'>
+          {
+
+              colimage.filter(item =>
+                selectedCategories.length === 0 || selectedCategories.includes(item.category)
+              )
+               .filter(item =>
+                selectedTypes.length === 0 || selectedTypes.includes(item.types)
+               )
+               .sort((a,b)=>{
+                    const priceA = parseFloat(a.crate.replace("$", ""));
+    const priceB = parseFloat(b.crate.replace("$", ""));
+    return sortOrder === "low" ? priceA - priceB : priceB - priceA;
+
+               })
+            .map((i) => (
+              <div>
+                <div><img src={i.image} /> </div>
+                <div><h2 className='text-sm'>{i.ctext} </h2> </div>
+                <div><h2 className='text-sm'>{i.crate} </h2> </div>
+              </div>
+            ))
+
+          }
+
+        </div>
+      </div>
+      <Subscribe />
     </div>
- </div>
- </div>
   )
 }
 
