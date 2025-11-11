@@ -44,22 +44,19 @@ function List() {
         <div className="ml-[30px] mt-[30px]">
           <h1 className="font-bold text-gray-700 text-xl mb-[20px]">All Product List</h1>
           <table className="min-w-full bg-white border border-gray-400">
-            <div className='flex flex-col '>
             <thead>
-              
-              <tr className="flex flex-row justify-between gap-[100px]">
-                <th className="py-[10px] px-[25px] border-b  bg-gray-50 mb-[10px]">Image</th>
-                <th className="py-[10px] px-[25px] border-b  bg-gray-50 mb-[10px]">Name</th>
-                <th className="py-[10px] px-[25px] border-b  bg-gray-50 mb-[10px]">Category</th>
-                <th className="py-[10px] px-[25px] border-b bg-gray-50 mb-[10px]">Price</th>
-                <th className="py-[10px] px-[25px] border-b  bg-gray-50 mb-[10px]">Action</th>
+              <tr>
+                <th className="py-[10px] px-[25px] border-b bg-gray-50">Image</th>
+                <th className="py-[10px] px-[25px] border-b bg-gray-50">Name</th>
+                <th className="py-[10px] px-[25px] border-b bg-gray-50">Category</th>
+                <th className="py-[10px] px-[25px] border-b bg-gray-50">Price</th>
+                <th className="py-[10px] px-[25px] border-b bg-gray-50">Action</th>
               </tr>
             </thead>
             <tbody>
               {list.map((item) => (
-                <tr key={item._id} className=" ">
-                  <div className='flex flex-row justify-between gap-[110px]'>
-                  <td className="py-[10px] px-[25px] border-b">
+                <tr key={item._id}>
+                  <td className="py-[10px] px-[25px] border-b text-center">
                     <img
                       className="w-10 h-10 mx-auto"
                       src={item.image?.[0] || '/placeholder.jpg'}
@@ -77,20 +74,21 @@ function List() {
                       Delete
                     </button>
                   </td>
-                  </div>
                 </tr>
               ))}
-
+              {list.length === 0 && (
+                <tr>
+                  <td colSpan="5" className="text-center py-4">
+                    No products found.
+                  </td>
+                </tr>
+              )}
             </tbody>
-            </div>
           </table>
         </div>
-        </div>
       </div>
-  
-
+    </div>
   );
 }
 
 export default List;
-

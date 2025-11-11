@@ -13,6 +13,8 @@ import Singlepage from './Pages/Singlepage';
 import Cart from './Pages/Cart';
 import { ToastContainer } from 'react-toastify';
 import { ShopProvider } from './Components/Context/ShopContext';
+import Delivery from './Pages/Delivery';
+import Orders from './Pages/Orders'
 function App() {
   return (
     <>
@@ -28,9 +30,13 @@ function App() {
      <Route path='/contact' element={<Contact/>}></Route>
      <Route path='/signup' element={<Signup/>}></Route>
        <Route path='/login' element={<Login/>}></Route>
-       <Route path='/singlepage' element={<Singlepage/>}></Route>
+       <Route path='/singlepage/:id' element={<Singlepage/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
+        <Route path='/delivery' element={<Delivery/>}></Route>
+         <Route path='/order' element={<Orders/>}></Route>
   </Routes>
+
+
 
  <Footer/>
   </BrowserRouter>

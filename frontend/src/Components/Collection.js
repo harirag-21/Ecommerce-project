@@ -13,7 +13,7 @@ import dress10 from "../Assets/Rectangle 3615.png"
 import dress11 from "../Assets/Rectangle 3627.png"
 import dress12 from "../Assets/Rectangle 3626.png"
 
-
+import {Link} from "react-router-dom"
 
 function Collection() {
   const collection=[{
@@ -80,7 +80,7 @@ function Collection() {
               collection.map((i)=>(
                 <>
                 <div className='flex flex-cols'>
-                <div><img src={i.collections}/></div>
+                 <Link to={"/Singlepage"}><img src={i.collections} alt='y'/></Link>
                 <div><h2 className=''>{i.ctext}</h2></div>
                 <div><h2 className=''>{i.crate}</h2></div>
                 </div>

@@ -7,7 +7,8 @@ const userRoutes=require("./Routes/UserRoutes")
 const productRoutes=require("./Routes/ProductRoutes")
 const cloudinary=require("./Config/Cloudinary")
 const adminRoutes=require("./Routes/AdminRoutes")
-
+const cartRoutes=require("./Routes/CartRoutes")
+const orderRoutes = require("./Routes/OrderRoutes")
 const app=express()
 
 mongoDb()
@@ -16,7 +17,8 @@ app.use(express.json())
 app.use("/api/admins",adminRoutes)
 app.use("/api/users",userRoutes);
 app.use("/api/products",productRoutes);
-
+app.use("/api/cart",cartRoutes);
+app.use("/api/orders", orderRoutes);
 
 
 app.use('/images', express.static('images'));

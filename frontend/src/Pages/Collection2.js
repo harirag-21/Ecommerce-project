@@ -1,221 +1,225 @@
 import React from 'react'
 import rectangle from "../Assets/Rectangle 3605.png"
-import first from "../Assets/p_img1.png"
-import second from "../Assets/p_img2.png"
-import third from "../Assets/p_img3 (1).png"
-import fourth from "../Assets/p_img4.png"
-import fifth from "../Assets/p_img5.png"
-import sixth from "../Assets/p_img6.png"
-import seventh from "../Assets/p_img7.png"
-import eight from "../Assets/p_img8.png"
-import nine from "../Assets/p_img9.png"
-import i10 from "../Assets/p_img10.png"
-import i11 from "../Assets/p_img11.png"
-import i12 from "../Assets/p_img12.png"
-import i13 from "../Assets/p_img13.png"
-import i14 from "../Assets/p_img14.png"
-import i15 from "../Assets/p_img15.png"
-import i16 from "../Assets/p_img16.png"
-import i17 from "../Assets/p_img17.png"
-import i18 from "../Assets/p_img18.png"
-import i19 from "../Assets/p_img19.png"
-import i20 from "../Assets/p_img20.png"
-import i21 from "../Assets/p_img21.png"
-import i22 from "../Assets/p_img22.png"
-import i23 from "../Assets/p_img23.png"
-import i24 from "../Assets/p_img24.png"
-import i25 from "../Assets/p_img25.png"
-// import i26 from "../Assets/p_img26.png"
-import i27 from "../Assets/p_img27.png"
-import i28 from "../Assets/p_img28.png"
-import i29 from "../Assets/p_img29.png"
-import i30 from "../Assets/p_img30.png"
-import i31 from "../Assets/p_img40.png"
-import i32 from "../Assets/p_img43.png"
-import i33 from "../Assets/p_img48.png"
+// import first from "../Assets/p_img1.png"
+// import second from "../Assets/p_img2.png"
+// import third from "../Assets/p_img3 (1).png"
+// import fourth from "../Assets/p_img4.png"
+// import fifth from "../Assets/p_img5.png"
+// import sixth from "../Assets/p_img6.png"
+// import seventh from "../Assets/p_img7.png"
+// import eight from "../Assets/p_img8.png"
+// import nine from "../Assets/p_img9.png"
+// import i10 from "../Assets/p_img10.png"
+// import i11 from "../Assets/p_img11.png"
+// import i12 from "../Assets/p_img12.png"
+// import i13 from "../Assets/p_img13.png"
+// import i14 from "../Assets/p_img14.png"
+// import i15 from "../Assets/p_img15.png"
+// import i16 from "../Assets/p_img16.png"
+// import i17 from "../Assets/p_img17.png"
+// import i18 from "../Assets/p_img18.png"
+// import i19 from "../Assets/p_img19.png"
+// import i20 from "../Assets/p_img20.png"
+// import i21 from "../Assets/p_img21.png"
+// import i22 from "../Assets/p_img22.png"
+// import i23 from "../Assets/p_img23.png"
+// import i24 from "../Assets/p_img24.png"
+// import i25 from "../Assets/p_img25.png"
+// // import i26 from "../Assets/p_img26.png"
+// import i27 from "../Assets/p_img27.png"
+// import i28 from "../Assets/p_img28.png"
+// import i29 from "../Assets/p_img29.png"
+// import i30 from "../Assets/p_img30.png"
+// import i31 from "../Assets/p_img40.png"
+// import i32 from "../Assets/p_img43.png"
+// import i33 from "../Assets/p_img48.png"
 import Subscribe from '../Components/Subscribe'
+import { useContext } from 'react';
+import { ShopContext } from '../Components/Context/ShopContext';
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 function Collection2() {
+  const{products}=useContext(ShopContext)
   const [selectedCategories,setselectedCategories]=useState([])
     const [selectedTypes,setselectedTypes]=useState([])
     const [sortOrder,setSortOrder]=useState("low")
    
-  const colimage = [{
-    image: first,
-    ctext: "Women Round Neck Cotton Top",
-    crate: "$149",
-    category:"women"
-  }, {
-    image: second,
-    ctext: "Men Neck Cotton T-shirt",
-    crate: "$149",
-    category:"men"
-  }, {
-    image: third,
-    ctext: "Girls Neck Cotton Top",
-    crate: "$149",
-      category:"kids"
-  }, {
-    image: fourth,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }, {
+  // const colimage = [{
+  //   image: first,
+  //   ctext: "Women Round Neck Cotton Top",
+  //   crate: "$149",
+  //   category:"women"
+  // }, {
+  //   image: second,
+  //   ctext: "Men Neck Cotton T-shirt",
+  //   crate: "$149",
+  //   category:"men"
+  // }, {
+  //   image: third,
+  //   ctext: "Girls Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kids"
+  // }, {
+  //   image: fourth,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
 
-    image: fifth,
-    ctext: "Women Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: sixth,
-    ctext: "girl Neck Cotton Top",
-    crate: "$149",
-      category:"women"
-  }, {
-    image: seventh,
-    ctext: "Men Tapered Fit Flat-Front Trousers",
-    crate: "$149",
-      category:"men"
-  }, {
-    image: eight,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }, {
-    image: nine,
-    ctext: "Girl Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i10,
-    ctext: "Men Tapered Fit Flat-Front Trousers",
-    crate: "$149",
-      category:"men",
-      types:"bottomwear"
-  }, {
-    image: i11,
-    ctext: "Men neck",
-    crate: "$149",
-      category:"men",
-      types:"topwear"
-  }, {
-    image: i12,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }, {
-    image: i13,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"women"
-  }, {
-    image: i14,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i15,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }, {
-    image: i16,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i17,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }, {
-    image: i18,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i19,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i20,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
+  //   image: fifth,
+  //   ctext: "Women Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: sixth,
+  //   ctext: "girl Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"women"
+  // }, {
+  //   image: seventh,
+  //   ctext: "Men Tapered Fit Flat-Front Trousers",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
+  //   image: eight,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
+  //   image: nine,
+  //   ctext: "Girl Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i10,
+  //   ctext: "Men Tapered Fit Flat-Front Trousers",
+  //   crate: "$149",
+  //     category:"men",
+  //     types:"bottomwear"
+  // }, {
+  //   image: i11,
+  //   ctext: "Men neck",
+  //   crate: "$149",
+  //     category:"men",
+  //     types:"topwear"
+  // }, {
+  //   image: i12,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
+  //   image: i13,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"women"
+  // }, {
+  //   image: i14,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i15,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
+  //   image: i16,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i17,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
+  //   image: i18,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i19,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i20,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
 
-  }, {
-    image: i21,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-          category:"women"
-  }, {
-    image: i22,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }, {
-    image: i23,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i24,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-  }, {
-    image: i25,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"kid"
-    // },{
-    //    image:i26,
-    //   ctext:"Men Neck Cotton Top",
-    //   crate:"$149"
-  }, {
-    image: i27,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-          category:"kid"
-  }, {
-    image: i28,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
+  // }, {
+  //   image: i21,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //         category:"women"
+  // }, {
+  //   image: i22,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }, {
+  //   image: i23,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i24,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  // }, {
+  //   image: i25,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"kid"
+  //   // },{
+  //   //    image:i26,
+  //   //   ctext:"Men Neck Cotton Top",
+  //   //   crate:"$149"
+  // }, {
+  //   image: i27,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //         category:"kids"
+  // }, {
+  //   image: i28,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
       
-  }, {
-    image: i29,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-          category:"kid"
-  }, {
-    image: i30,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-          category:"women"
-  }, {
-    image: i31,
-    ctext: "Men Neck Cotton Top",
-    crate: "$100",
-          category:"men"
-  }, {
-    image: i32,
-    ctext: "Men Neck Cotton Top",
-    crate: "$169",
-      category:"men"
-  }, {
-    image: i33,
-    ctext: "Men Neck Cotton Top",
-    crate: "$149",
-      category:"men"
-  }
-  ]
+  // }, {
+  //   image: i29,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //         category:"kid"
+  // }, {
+  //   image: i30,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //         category:"women"
+  // }, {
+  //   image: i31,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$100",
+  //         category:"men"
+  // }, {
+  //   image: i32,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$169",
+  //     category:"men"
+  // }, {
+  //   image: i33,
+  //   ctext: "Men Neck Cotton Top",
+  //   crate: "$149",
+  //     category:"men"
+  // }
+  // ]
 const handleCategoryChange=(category)=>{
   setselectedCategories(prev=>prev.includes(category) ? prev.filter(c=>c!==category):[...prev,category])
 }
-const handleTypeChange=(types)=>{
-  setselectedTypes(prev=>prev.includes(types)?prev.filter(t=>t!==types):[...prev,types])
+const handleTypeChange=(type)=>{
+  setselectedTypes(prev=>prev.includes(type)?prev.filter(t=>t!==type):[...prev,type])
 }
 
 
@@ -247,7 +251,7 @@ const handleTypeChange=(types)=>{
             <div className=' gap-[10px] mt-[20px]'>
               <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("men")} className='w-[20px] h-[20px] mr-3 mt-[10px] ' />Men</div>
               <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("women")} className='w-[20px] h-[20px] mr-3 mt-[10px]' />Women</div>
-              <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("kid")} className='w-[20px] h-[20px] mr-3  mt-[10px]' />Kids</div>
+              <div className='ml-[30px]'><input type='checkbox' onChange={()=>handleCategoryChange("kids")} className='w-[20px] h-[20px] mr-3  mt-[10px]' />Kids</div>
             </div>
           </div>
 
@@ -257,30 +261,29 @@ const handleTypeChange=(types)=>{
             <div className=' gap-[10px] mt-[20px]'>
               <div className='ml-[30px]'><input type='checkbox' value="topwear" onChange={() => handleTypeChange("topwear")} className='w-[20px] h-[20px] mr-3 mt-[10px] ' />Topwear</div>
               <div className='ml-[30px]'><input type='checkbox' value="bottomwear" onChange={() => handleTypeChange("bottomwear")} className='w-[20px] h-[20px] mr-3 mt-[10px]' />Bottomwear</div>
-              <div className='ml-[30px]'><input type='checkbox' className='w-[20px] h-[20px] mr-3  mt-[10px]' />Winterwear</div>
+              <div className='ml-[30px]'><input type='checkbox' value="winterwear" onChange={() => handleTypeChange("winterwear")} className='w-[20px] h-[20px] mr-3  mt-[10px]' />Winterwear</div>
             </div>
           </div>
         </div>
         <div className='mt-[50px] grid grid-cols-4 gap-[20px]'>
           {
 
-              colimage.filter(item =>
+              products.filter(item =>
                 selectedCategories.length === 0 || selectedCategories.includes(item.category)
               )
                .filter(item =>
-                selectedTypes.length === 0 || selectedTypes.includes(item.types)
+                selectedTypes.length === 0 || selectedTypes.includes(item.subcategory)
                )
-               .sort((a,b)=>{
-                    const priceA = parseFloat(a.crate.replace("$", ""));
-    const priceB = parseFloat(b.crate.replace("$", ""));
-    return sortOrder === "low" ? priceA - priceB : priceB - priceA;
-
-               })
+               .sort((a, b) => {
+  const priceA = Number(a.price) || 0;
+  const priceB = Number(b.price) || 0;
+  return sortOrder === "low" ? priceA - priceB : priceB - priceA;
+})
             .map((i) => (
               <div>
-                <div><img src={i.image} /> </div>
-                <div><h2 className='text-sm'>{i.ctext} </h2> </div>
-                <div><h2 className='text-sm'>{i.crate} </h2> </div>
+                <Link to={`/singlepage/${i._id}`}><img src={i.image} alt='y'/> </Link>
+                <div><h2 className='text-sm'>{i.name} </h2> </div>
+                <div><h2 className='text-sm'>{i.price} </h2> </div>
               </div>
             ))
 

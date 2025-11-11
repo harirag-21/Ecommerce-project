@@ -56,7 +56,7 @@ function Login() {
   if (response.data.success) {
   // setToken(response.data.token);
   localStorage.setItem("token", response.data.token);
-  localStorage.setItem("userid", response.data.id);
+  localStorage.setItem("userId", response.data.id);
     alert("Login successful!");
   toast.success("Login successfully!");
   //  navigate('/');
